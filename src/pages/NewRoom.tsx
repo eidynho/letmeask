@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { useAuth } from '../hooks/useAuth'
 import illustrationImg from '../assets/images/illustration.svg'
@@ -56,7 +56,7 @@ export function NewRoom () {
             </Button>
           </form>
           <p>
-            Quer entrar em uma sala existente? 
+            Quer entrar em uma sala existente?  
             <Link to="/">Clique aqui</Link>
           </p>
         </div>

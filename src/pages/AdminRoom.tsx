@@ -1,6 +1,7 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 
 import { useRoom } from '../hooks/useRoom'
+import { database } from '../services/firebase'
 // import { useAuth } from '../hooks/useAuth'
 
 import logoImg from '../assets/images/logo.svg'
@@ -13,8 +14,6 @@ import { RoomCode } from '../components/RoomCode'
 import { Question } from '../components/Question'
 
 import '../styles/room.scss'
-import { database } from '../services/firebase'
-
 
 
 type RoomParamsProps = {
@@ -59,11 +58,10 @@ export function AdminRoom() {
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
-          <div>
+          <Link to="/rooms/new">
+            <img src={logoImg} alt="Letmeask" />
+          </Link>
             <RoomCode code={roomId!}/>
-            <Button isOutlined onClick={handleEndRoom}>Encerrar sala</Button>
-          </div>
         </div>
       </header>
 
@@ -74,6 +72,7 @@ export function AdminRoom() {
             questions.length > 0 && <span>{questions.length} pergunta(s)</span>
           }
         </div>
+        <button onClick={handleEndRoom}>Encerrar sala</button>
 
         <div className="question-list">
           {

@@ -53,11 +53,29 @@
 
     > img {
       align-self: center;
+      margin-bottom: 32px;
+    }
+
+    strong {
+      font-size: 24px;
+      display: none;
+
+      @media (max-width: 900px) {
+        display: block;
+      }
+    }
+
+    .text-caption {
+      display: none;
+      
+      @media (max-width: 900px) {
+        display: block;
+      }
     }
 
     h2 {
       font-size: 24px;
-      margin: 64px 0 24px;
+      margin-bottom: 24px;
       font-family: 'Poppins', sans-serif;
     }
 
@@ -90,7 +108,8 @@
     }
 
     .create-room {
-      margin-top: 64px;
+      margin-top: 32px;
+      padding: 0 16px;
       height: 50px;
       border-radius: 8px;
       font-weight: 500;
@@ -139,6 +158,15 @@
         margin-left: 16px;
       }
 
+    }
+  }
+}
+
+
+@media (max-width: 900px) {
+  #page-auth {
+    aside {
+      display: none;
     }
   }
 }

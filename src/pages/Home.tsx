@@ -56,6 +56,8 @@ export function Home () {
       <main>
         <div className="main-content">
           <img src={logoImg} alt="Lekmeask" />
+          <strong>Crie salas de Q&A ao-vivo</strong>
+          <p className="text-caption">Tire as dúvidas da sua audiência em tempo real</p>
           <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImg} alt="Logo" />
             Crie sua sala com Google

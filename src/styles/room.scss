@@ -9,18 +9,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      text-decoration: none;
       
-      > img {
-        max-height: 45px;
-      }
-
-      > div {
-        display: flex;
-        gap: 16px;
-
-        button {
-          height: 40px;
-        }
+      img {
+        max-height: 48px;
       }
     }
   }
@@ -29,8 +21,24 @@
     max-width: 800px;
     margin: 0 auto;
 
+    > button {
+      width: 200px;
+      margin: 0 16px;
+      padding: 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #ea4335;
+      color: #FFF;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
+
     .room-title {
-      margin: 32px 0 24px;
+      margin: 32px 16px 24px;
       display: flex;
       align-items: center;
 
@@ -52,6 +60,8 @@
     }
 
     form {
+      margin: 0 16px;
+      
       textarea {
         width: 100%;
         border: 0;
@@ -84,6 +94,11 @@
             color: #29292e;
             font-weight: 500;
             font-size: 14px;
+
+
+            @media (max-width: 430px) {
+              display: none;
+            }
           }
         }
 
@@ -106,7 +121,7 @@
     }
 
     .question-list {
-      margin-top: 32px;
+      margin: 32px 16px 0 16px;
     }
   }
 }
